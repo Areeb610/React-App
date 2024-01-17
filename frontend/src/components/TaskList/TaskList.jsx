@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import AddTaskBar from '../AddTaskBar/AddTaskBar';
 import './TaskList.css';
-const herokuBackendUrl = 'https://react-app-server-eiuz5vmkl-areeb610.vercel.app';
+const herokuBackendUrl = 'https://react-app-client-dbakm7ztc-areeb610.vercel.app';
 
 
 const TaskList = () => {
@@ -45,7 +45,7 @@ const TaskList = () => {
 
   const handleCompleteClick = async (taskId) => {
     try {
-      const response = await fetch(`${herokuBackendUrl}tasks/${taskId}`, {
+      const response = await fetch(`${herokuBackendUrl}/tasks/${taskId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
