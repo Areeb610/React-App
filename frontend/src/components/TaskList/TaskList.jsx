@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import AddTaskBar from '../AddTaskBar/AddTaskBar';
 import './TaskList.css';
-const herokuBackendUrl = 'https://react-app-client-dbakm7ztc-areeb610.vercel.app';
+
 
 
 const TaskList = () => {
@@ -14,7 +14,7 @@ const TaskList = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch(`${herokuBackendUrl}/tasks`);
+      const response = await fetch(`https://localhost:3000/tasks`);
       const data = await response.json();
       setTasks(data);
     } catch (error) {
@@ -28,7 +28,7 @@ const TaskList = () => {
 
   const handleDeleteClick = async (taskId) => {
     try {
-      const response = await fetch(`${herokuBackendUrl}/tasks/${taskId}`, {
+      const response = await fetch(`https://localhost:3000/tasks/${taskId}`, {
         method: 'DELETE',
       });
 
@@ -45,7 +45,7 @@ const TaskList = () => {
 
   const handleCompleteClick = async (taskId) => {
     try {
-      const response = await fetch(`${herokuBackendUrl}/tasks/${taskId}`, {
+      const response = await fetch(`https://localhost:3000/tasks/${taskId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const TaskList = () => {
 
   const handleAddTask = async (newTaskDescription) => {
     try {
-      const response = await fetch( `${herokuBackendUrl}/tasks`, {
+      const response = await fetch( `https://localhost:3000/tasks`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
