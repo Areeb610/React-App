@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import AddTaskBar from '../AddTaskBar/AddTaskBar';
 import './TaskList.css';
-const herokuBackendUrl = 'https://damp-lowlands-10265-38ddcac68f69.herokuapp.com';
+const herokuBackendUrl = 'https://react-app-server-eiuz5vmkl-areeb610.vercel.app';
 
 
 const TaskList = () => {

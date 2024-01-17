@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const cors=require("cors");
 const corsOptions ={
-   origin:'*', 
+   origin:'https://react-app-server-eiuz5vmkl-areeb610.vercel.app/tasks', 
    credentials:true,            //access-control-allow-credentials:true
    optionSuccessStatus:200,
 }
